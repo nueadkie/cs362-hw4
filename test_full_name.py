@@ -13,7 +13,7 @@ class Tester(unittest.TestCase):
       full_name.generate(1234, 5678)
   
   # Test for a case with too few inputs.
-  def test_str_nums(self):
+  def test_few_inputs(self):
     with self.assertRaises(TypeError):
       full_name.generate("Full Name")
 
