@@ -16,8 +16,8 @@ class Tester(unittest.TestCase):
   
   # Error-checking type errors
   def test_type_error(self):
-    result = cube_volume.volume("hello")
-    self.assertEqual(result, None)
+    with self.assertRaises(TypeError):
+      cube_volume.volume("hello")
 
 if __name__ == '__main__':
   unittest.main()

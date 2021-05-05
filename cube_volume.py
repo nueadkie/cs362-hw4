@@ -4,4 +4,4 @@ def volume(length):
   if isinstance(length, (int, float, complex)):
     return length * length * length
   else:
-    return None
+    raise TypeError("can only calculate cubes with numerical sidelength")

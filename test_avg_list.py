@@ -9,13 +9,13 @@ class Tester(unittest.TestCase):
 
   # Test for the special case of an empty list
   def test_empty(self):
-    result = avg_list.calc([])
-    self.assertEqual(result, None)
+    with self.assertRaises(ValueError):
+      avg_list.calc([])
   
   # Test for if a list member is not a number
   def test_type_error(self):
-    result = avg_list.calc([2, 3, 4, 5, 6, "yes"])
-    self.assertEqual(result, None)
+    with self.assertRaises(TypeError):
+      avg_list.calc([2, 3, 4, 5, 6, "yes"])
 
 if __name__ == '__main__':
   unittest.main()
