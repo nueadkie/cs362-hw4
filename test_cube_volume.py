@@ -2,23 +2,10 @@ import unittest
 import cube_volume
 
 class Tester(unittest.TestCase):
-  # Tests for integer inputs.
-  def test_int(self):
-    result = cube_volume.volume(2)
-    self.assertEqual(result, 8)
-  
-  def test_int2(self):
-    result = cube_volume.volume(5)
-    self.assertEqual(result, 125)
-  
   # Tests for float inputs
   def test_float(self):
-    result = cube_volume.volume(1.2)
-    self.assertEqual(result, 1.728)
-  
-  def test_float2(self):
-    result = cube_volume.volume(5.0)
-    self.assertEqual(result, 125.0)
+    result = cube_volume.volume(5.5)
+    self.assertEqual(result, 166.375)
   
   # Test for an imaginary input
   def test_complex(self):
